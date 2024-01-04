@@ -9,7 +9,7 @@ This repo provides the code to deploy it on cloud and a client to interact with 
 ## Instructions
 
 ### Running the services
-I have tested this code on google cloud platform's kubernetes engine (GKE) because it uses GCP's Vertex AI APIs for text generation, but technically it can run on any cloud or locally provided that an appropriate `generate_text()` function (imported in `llm-handler.py`) is implemented in its corresponding api_helper file. 
+I have tested this code on google cloud platform's kubernetes engine (GKE) because it uses GCP's Vertex AI APIs for text generation, but technically it can run on any cloud or locally provided that an appropriate `generate_text()` function (imported in `llm-handler.py`) is implemented in its corresponding api_helper file. If you are using VertexAI on GKE then make sure that API access to VertexAI is enabled.
 
 After starting a kubernetes cluster, clone the repo:
 ```

@@ -48,7 +48,7 @@ python3 polybius_client.py
 Create a new username and password and then login using those credentials.
 
 **Note:** 
-- To play the game (on client side) four files are required which can be zipped an distributed to users: `polybius_client.py`, `global_variables.py`, `utils.py`, `requirements.txt`
+- To play the game (on client side) four files are required which can be zipped and distributed to users: `polybius_client.py`, `global_variables.py`, `utils.py`, `requirements.txt`
 - While playing the game, certain keywords can be used to interact with the game UI:
   - `exit` exits the game and returns to previous UI screen
   - `retry` if you do not get updated server response for previous action (prompt) then use this keyword to retry that action

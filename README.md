@@ -64,12 +64,11 @@ The current architecture is simple as illustrated in the figure
 ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/polybius_fig.png)
 
 
-## Examples
+## Screenshots
 
 | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/main_menu.png) | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/user_menu.png)  |
 | :---:|:---: |
 | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/game_pic_1.png) | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/game_pic_2.png)  |
-| :---:|:---: |
 
 
 ## To Do

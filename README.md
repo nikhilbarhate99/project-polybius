@@ -83,7 +83,7 @@ The current architecture is simple as illustrated in the figure
 | /apiv1/game/state | GET | Get the most updated state of a game |
 
 Additionally there a few testing endpoints that can modify the DB (you might want to remove these).
-All the endpoint configs are in `REST_END_POINTS` variable in `global_variables.py` file and their corresponding definations are in `rest-server.py` file.
+All the endpoint configs are in `REST_END_POINTS` variable in `global_variables.py` file and their corresponding definitions are in `rest-server.py` file.
 
 
 ## To Do

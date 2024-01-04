@@ -45,21 +45,31 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 python3 polybius_client.py
 ```
-As long as the cluster is running, multiple clients can play the game and their games will be saved in the Database.
+Create a new username and password and then login using those credentials.
 
-**Note:** To play the game (on client side) four files are required which can be zipped an distributed to users: `polybius_client.py`, `global_variables.py`, `utils.py`, `requirements.txt`
+**Note:** 
+- To play the game (on client side) four files are required which can be zipped an distributed to users: `polybius_client.py`, `global_variables.py`, `utils.py`, `requirements.txt`
+- While playing the game, certain keywords can be used to interact with the game UI:
+  - `exit` exits the game and returns to previous UI screen
+  - `retry` if you do not get updated server response for previous action (prompt) then use this keyword to retry that action
+  - `redo` if the generated output is gibberish or undesirable then use this keyword to resample the last generated output
+- As long as the cluster is running, multiple clients can play the game and their games will be saved in the Database.
+- All individual actions (prompts) are saved in DB and all games can be accessed (using the login crendentials) and resumed later after exiting the client
+
+
 
 ## System
 
 The current architecture is simple as illustrated in the figure
-![](https://github.com/nikhilbarhate99/dcsc-project-polybius/blob/main/media/polybius_fig.png)
+![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/polybius_fig.png)
 
 
 ## Examples
 
-| ![](https://github.com/nikhilbarhate99/dcsc-project-polybius/blob/main/media/game_pic_1.png) | ![](https://github.com/nikhilbarhate99/dcsc-project-polybius/blob/main/media/game_pic_2.png)  |
+| ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/main_menu.png) | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/user_menu.png)  |
 | :---:|:---: |
-
+| ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/game_pic_1.png) | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/game_pic_2.png)  |
+| :---:|:---: |
 
 
 ## To Do

@@ -1,5 +1,5 @@
 VERSION=v12
-DOCKERUSER=nikhilbarhate99
+DOCKERUSER=YOUR_DOCKER_USER_NAME
 
 build:
 	cp ../global_variables.py ./

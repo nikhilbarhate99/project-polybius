@@ -47,7 +47,7 @@ python3 polybius_client.py
 ```
 Create a new username and password and then login using those credentials.
 
-**Note:** 
+### Notes
 - To play the game (on client side) four files are required which can be zipped an distributed to users: `polybius_client.py`, `global_variables.py`, `utils.py`, `requirements.txt`
 - While playing the game, certain keywords can be used to interact with the game UI:
   - `exit` exits the game and returns to previous UI screen
@@ -55,13 +55,7 @@ Create a new username and password and then login using those credentials.
   - `redo` if the generated output is gibberish or undesirable then use this keyword to resample the last generated output
 - As long as the cluster is running, multiple clients can play the game and their games will be saved in the Database.
 - All individual actions (prompts) are saved in DB and all games can be accessed (using the login crendentials) and resumed later after exiting the client
-
-
-
-## System
-
-The current architecture is simple as illustrated in the figure
-![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/polybius_fig.png)
+- The current docker images (rest and llm) are pulled from my docker hub account, but you want to make changes to the code and build new images then you will need to use `make` and then `make push` commands, before that edit your docker hub username in the makefiles
 
 
 ## Screenshots
@@ -69,6 +63,27 @@ The current architecture is simple as illustrated in the figure
 | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/main_menu.png) | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/user_menu.png)  |
 | :---:|:---: |
 | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/game_pic_1.png) | ![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/game_pic_2.png)  |
+
+
+## System
+
+### Architecture
+The current architecture is simple as illustrated in the figure
+![](https://github.com/nikhilbarhate99/project-polybius/blob/main/media/polybius_fig.png)
+
+### REST API
+| Endpoint | Type | Description |
+| :---: | :---: | :---: |
+| /apiv1/user/new | POST | Create a new user account |
+| /apiv1/user/login | GET | Login to a user account |
+| /apiv1/user/games | GET | List all games of an user |
+| /apiv1/game/new | POST | Create a new game |
+| /apiv1/game/action | POST | Take an action in a game |
+| /apiv1/game/redo | GET | Resample last generated output |
+| /apiv1/game/state | GET | Get the most updated state of a game |
+
+Additionally there a few testing endpoints that can modify the DB (you might want to remove these).
+All the endpoint configs are in `REST_END_POINTS` variable in `global_variables.py` file and their corresponding definations are in `rest-server.py` file.
 
 
 ## To Do

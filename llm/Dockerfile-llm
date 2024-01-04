@@ -1,0 +1,14 @@
+FROM python:3.8
+
+RUN pip3 install --upgrade jsonpickle redis minio
+
+RUN pip3 install google-cloud-aiplatform
+
+RUN mkdir /root/project-polybius
+
+WORKDIR /root/project-polybius/
+
+COPY . /root/project-polybius/
+
+CMD ["python3", "-u", "llm-handler.py"]
+

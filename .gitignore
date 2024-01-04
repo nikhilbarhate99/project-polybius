@@ -1,0 +1,12 @@
+__pycache__/
+venv/
+*.csv
+*.log
+*.pt
+*.pkl
+*.zip
+*.DS_Store
+*.pdf
+*.out
+*.png
+*.rdb

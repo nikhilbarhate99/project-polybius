@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llm-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: llm
+  template:
+    metadata:
+      labels:
+        app: llm
+    spec:
+      containers:
+      - name: llm-handler
+        image: nikhilbarhate99/project-polybius-llm:v12
+        imagePullPolicy: Always
+        env:
+        - name: REDIS_HOST
+          value: redis
+        - name: REDIS_PORT
+          value: '6379'
+        - name: MINIO_HOST
+          value: minio
+        - name: MINIO_PORT
+          value: '9000'

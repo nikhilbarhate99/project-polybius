@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest
+  template:
+    metadata:
+      labels:
+        app: rest
+    spec:
+      containers:
+      - name: rest-server
+        image: nikhilbarhate99/project-polybius-rest:v12
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5005
+        env:
+        - name: REDIS_HOST
+          value: redis
+        - name: REDIS_PORT
+          value: '6379'
+        - name: MINIO_HOST
+          value: minio
+        - name: MINIO_PORT
+          value: '9000'
+

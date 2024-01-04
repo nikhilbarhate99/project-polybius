@@ -183,7 +183,7 @@ class Player():
                 response = self.create_new_game()
                 if response["success"]:
                     self.play_game(game_id=response["server_response"]["game_id"])
-            elif(cmd == 'play'):
+            elif(cmd == 'resume'):
                 self.play_game()
             elif(cmd == 'exit'):
                 break
@@ -291,7 +291,7 @@ class Game():
             os.system('cls' if os.name == 'nt' else 'clear')
         print(get_ui_title_str(title))
 
-    def print_game_state(self):        
+    def print_game_state(self):
         self.print_ui_title()
         print(get_ui_formatted_game_state(self.game_dict["interactions"]), end='')      
 
